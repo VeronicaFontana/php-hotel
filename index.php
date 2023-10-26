@@ -38,6 +38,10 @@
         ],
     ];
 
+    foreach($hotels as $hotel){
+      var_dump(array_keys($hotel));
+    }
+    
 ?>
 
 
@@ -57,8 +61,8 @@
   <table class="table">
     <thead>
       <tr>
-        <?php foreach($hotels as $hotel): ?>
-        <th scope="col"><?php  echo array_keys($hotel)  ?></th>
+        <?php foreach(array_keys($hotels[0]) as $key): ?>
+          <th scope="col"><?php echo $key ?></th>
         <?php endforeach; ?>
       </tr>
     </thead>
