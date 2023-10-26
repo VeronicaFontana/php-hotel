@@ -65,12 +65,12 @@
     <tbody>
       <?php foreach($hotels as $hotel): ?>
       <tr>
-        <th scope="row">1</th>
+        <th scope="row">*</th>
         <td><?php echo $hotel["name"] ?></td>
         <td><?php echo $hotel["description"] ?></td>
         <td><?php echo ($hotel["parking"]? "Sì" : "No") ?></td>
         <td><?php echo $hotel["vote"]  ?></td>
-        <td><?php echo $hotel["distance_to_center"] ?></td>
+        <td><?php echo $hotel["distance_to_center"] ?> Km</td>
       </tr>
       <?php endforeach; ?>
     </tbody>
