@@ -37,11 +37,6 @@
             'distance_to_center' => 50
         ],
     ];
-
-    foreach($hotels as $hotel){
-      var_dump(array_keys($hotel));
-    }
-    
 ?>
 
 
@@ -61,6 +56,7 @@
   <table class="table">
     <thead>
       <tr>
+        <th scope="col"></th>
         <?php foreach(array_keys($hotels[0]) as $key): ?>
           <th scope="col"><?php echo $key ?></th>
         <?php endforeach; ?>
@@ -71,10 +67,10 @@
       <tr>
         <th scope="row">1</th>
         <td><?php echo $hotel["name"] ?></td>
-        <td><?php echo $hotel["description"]  ?></td>
-        <td><?php echo $hotel["parking"]  ?></td>
+        <td><?php echo $hotel["description"] ?></td>
+        <td><?php echo ($hotel["parking"]? "Sì" : "No") ?></td>
         <td><?php echo $hotel["vote"]  ?></td>
-        <td><?php echo $hotel["distance_to_center"]  ?></td>
+        <td><?php echo $hotel["distance_to_center"] ?></td>
       </tr>
       <?php endforeach; ?>
     </tbody>
